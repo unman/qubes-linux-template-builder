@@ -28,6 +28,10 @@ if [ "${VERBOSE}" == "1" ]; then
     export YUM_OPTS="${YUM_OPTS} -q"
 fi
 
+if [ "$TEMPLATE_FLAVOR" == "parrot" ];then
+    TEMPLATE_ROOT_SIZE=30G
+fi
+
 if [ -z "$TEMPLATE_ROOT_SIZE" ]; then
     TEMPLATE_ROOT_SIZE=10G
 fi
